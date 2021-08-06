@@ -53,7 +53,7 @@ Included in::
 |Lifecycle state
 
 |Zbkb (<<#zbkb>>) (RV32)
-|v0.9.4
+|v1.0.0-rc1
 |Frozen
 |===
 
