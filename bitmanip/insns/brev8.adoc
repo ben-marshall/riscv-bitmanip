@@ -1,11 +1,11 @@
-[#insns-revb,reftext="Reverse bits in bytes"]
-=== rev.b
+[#insns-brev8,reftext="Reverse bits in bytes"]
+=== brev8
 
 Synopsis::
 Reverse the bits in each byte of a source register.
 
 Mnemonic::
-rev.b _rd_, _rs_
+brev8 _rd_, _rs_
 
 Encoding::
 [wavedrom, , svg]

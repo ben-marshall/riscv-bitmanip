@@ -1,11 +1,11 @@
-[#insns-xpermb,reftext="Crossbar permutation (bytes)"]
-=== xperm.b
+[#insns-xperm8,reftext="Crossbar permutation (bytes)"]
+=== xperm8
 
 Synopsis::
 Byte-wise lookup of indicies into a vector in registers.
 
 Mnemonic::
-xperm.b _rd_, _rs1_, _rs2_
+xperm8 _rd_, _rs1_, _rs2_
 
 Encoding::
 [wavedrom, , svg]
@@ -22,7 +22,7 @@ Encoding::
 ....
 
 Description:: 
-The xperm.b instruction operates on bytes.
+The xperm8 instruction operates on bytes.
 The _rs1_ register contains a vector of XLEN/8 8-bit elements.
 The _rs2_ register contains a vector of XLEN/8 8-bit indexes.
 The result is each element in _rs2_ replaced by the indexed element in _rs1_,
@@ -31,15 +31,15 @@ or zero if the index into _rs2_ is out of bounds.
 Operation::
 [source,sail]
 --
-val xpermb_lookup : (bits(8), xlenbits) -> bits(8)
-function xpermb_lookup (idx, lut) = {
+val xperm8_lookup : (bits(8), xlenbits) -> bits(8)
+function xperm8_lookup (idx, lut) = {
     (lut >> (idx @ 0b000))[7..0]
 }
 
-function clause execute ( XPERM_B (rs2,rs1,rd)) = {
+function clause execute ( XPERM_8 (rs2,rs1,rd)) = {
     result : xlenbits = EXTZ(0b0);
     foreach(i from 0 to xlen by 8) {
-        result[i+7..i] = xpermn_lookup(X(rs2)[i+7..i], X(rs1));
+        result[i+7..i] = xperm8_lookup(X(rs2)[i+7..i], X(rs1));
     };
     X(rd) = result;
     RETIRE_SUCCESS
