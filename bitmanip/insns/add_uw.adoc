@@ -44,7 +44,7 @@ Included in::
 |Lifecycle state
 
 |Zba (<<#zba>>)
-|0.93
+|v1.0.0
 |Frozen
 |===
 

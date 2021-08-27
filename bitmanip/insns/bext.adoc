@@ -40,7 +40,7 @@ Included in::
 |Lifecycle state
 
 |Zbs (<<#zbs>>)
-|0.93
+|v1.0.0
 |Frozen
 |===
 

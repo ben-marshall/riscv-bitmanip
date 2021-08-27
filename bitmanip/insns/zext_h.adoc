@@ -56,6 +56,6 @@ Included in::
 |Lifecycle state
 
 |Zbb (<<#zbb>>)
-|0.93
+|v1.0.0
 |Frozen
 |===

@@ -57,7 +57,7 @@ Included in::
 |Lifecycle state
 
 |Zbc (<<#zbc>>)
-|0.93
+|v1.0.0
 |Frozen
 |===
 
