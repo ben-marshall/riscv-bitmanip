@@ -22,6 +22,12 @@ Encoding::
 Description:: 
 This instruction reverses the order of the bits in every byte of a register.
 
+NOTE: This instruction is a specific encoding of a more generic instruction
+which was originally proposed as part of the RISC-V Bitmanip extension
+(`grevi`). Eventually, the more generic instruction may be standardised.
+Until then, only the most common instances of it, such as this, are
+being included in specifications.
+
 Operation::
 [source,sail]
 --

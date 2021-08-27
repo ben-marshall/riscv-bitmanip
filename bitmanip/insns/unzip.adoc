@@ -27,6 +27,12 @@ word into odd/even bit positions in the destination word.
 It is the inverse of the <<insns-zip,zip>> instruction.
 This instruction is available only on RV32.
 
+NOTE: This instruction is a specific encoding of a more generic instruction
+which was originally proposed as part of the RISC-V Bitmanip extension
+(`unshfli`). Eventually, the more generic instruction may be standardised.
+Until then, only the most common instances of it, such as this, are
+being included in specifications.
+
 Operation::
 [source,sail]
 --
