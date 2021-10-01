@@ -48,7 +48,7 @@ Included in::
 |Frozen
 
 |Zbkb (<<#zbkb>>)
-|v1.0.0-rc2
+|v1.0.0-rc3
 |Frozen
 |===
 
