@@ -2,8 +2,8 @@
 === unzip
 
 Synopsis::
-Scatter upper/lower halves of the source register into odd/even bits of
-the destination respectivley.
+Place odd and even bits of the source word into upper/lower halves of the
+destination.
 
 Mnemonic::
 unzip _rd_, _rs_
@@ -23,10 +23,9 @@ Encoding::
 ....
 
 Description:: 
-This instruction scatters bits in the low half of the source register
-into the even bit positions of the destination, and scatters bits in the
-high half of the source register into the odd bit positions of the
-destination.
+This instruction places the even bits of the source register into the
+low half of the destination, and the odd bits of the source into the
+high bits of the destination.
 It is the inverse of the <<insns-zip,zip>> instruction.
 This instruction is available only on RV32.
 
@@ -40,8 +39,8 @@ Operation::
 [source,sail]
 --
 foreach (i from 0 to xlen/2-1) {
-  X(rd)[2*i  ] = X(rs1)[i       ]
-  X(rd)[2*i+1] = X(rs1)[i+xlen/2]
+  X(rd)[i       ] = X(rs1)[2*i  ]
+  X(rd)[i+xlen/2] = X(rs1)[2*i+1]
 }
 --
 
