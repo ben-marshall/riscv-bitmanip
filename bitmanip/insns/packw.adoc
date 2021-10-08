@@ -43,7 +43,7 @@ Included in::
 |Lifecycle state
 
 |Zbkb (<<#zbkb>>)
-|v1.0.0-rc3
+|v1.0.0-rc4
 |Frozen
 |===
 

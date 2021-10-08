@@ -51,7 +51,7 @@ Included in::
 |Frozen
 
 |Zbkc (<<#zbkc>>)
-|v1.0.0-rc3
+|v1.0.0-rc4
 |Frozen
 |===
 
